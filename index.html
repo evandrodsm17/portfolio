@@ -1,155 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="estilos.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Início</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frontend Developer - Portfólio</title>
+  <link rel="stylesheet" href="/portfolio/estilos.css" />
 </head>
+<body>
+  <header>
+    <div class="container">
+      <img src="/portfolio/foto.jpg" alt="Foto de perfil" class="profile-img" />
+      <h1>Evandro dos Santos Mota</h1>
+      <h2 id="typed-text"></h2>
 
-<body onload="create();">
-  <header class="cabecalho">
-    <div class="brand">
-      <div class="cabecalho-logo">
-        <img class="cabecalho-logo-img" src="https://uploaddeimagens.com.br/images/004/093/917/full/Logo.png?1667822365" alt="M17 Tecnologia" />
-      </div>
-      <div class="cabecalho-texto">
-        <h1 class="cabecalho-titulo">M17 TECNOLOGIA</h1>
+      <div class="social-links">
+        <a href="https://github.com/evandrodsm17" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/evandrodsm17/" target="_blank">LinkedIn</a>
+        <a href="https://wa.me/5571997428722" target="_blank">Whatsapp</a>
       </div>
     </div>
-    <nav class="navbar">
-      <ul class="navbar-itens">
-        <li class="navbar-item"><a href="#sobre-mim">Sobre mim</a></li>
-        <li class="navbar-item"><a href="#projetos">Projetos</a></li>
-        <li class="navbar-item"><a href="#clientes">Clientes</a></li>
-        <li class="navbar-item"><a
-            href="https://api.whatsapp.com/send?phone=5575999937182&text=Ol%C3%A1%2C%20encontrei%20o%20seu%20n%C3%BAmero%20no%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20entrar%20em%20contato"
-            target="_blank"><i class="fa-brands fa-whatsapp"></i> Fale conosco</a></li>
-      </ul>
-    </nav>
   </header>
-  <div class="content">
-    <div class="content-area" id="sobre-mim">
-      <div class="content-area-texto">
-        <p class="content-area-texto-01">EU DESENVOLVO SOLUÇÕES.</p>
-        <p class="content-area-texto-02"><strong>Evandro dos S Mota</strong><br />Desenvolvedor</p>
-        <p class="content-area-texto-03">Formado em análise e desenvolvimento de sistemas pela <br />Universidade
-          Estácio
-          de Sá em 2021, sou um profissional <br />
-          apaixonado por tecnologia e por resolver problemas reais.</p>
-        <div class="buttons">
-          <a href="https://www.linkedin.com/in/evandrodsm17/" target="_blank">
-            <button class="btn-linkedin"><i class="fa-brands fa-linkedin"></i> Linkedin</button>
-          </a>
-          <a href="https://github.com/evandrodsm17" target="_blank">
-            <button class="btn-github"><i class="fa-brands fa-github"></i> Github</button>
-          </a>
-          <a href="https://instagram.com/m17tecnologia" target="_blank">
-            <button class="btn-instagram"><i class="fa-brands fa-instagram"></i> Instagram</button>
-          </a>
-        </div>
 
+  <section class="skills">
+    <h3>Habilidades</h3>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>Bootstrap</li>
+      <li>JavaScript</li>
+      <li>NodeJS</li>
+      <li>React</li>
+      <li>Git & GitHub</li>
+      <li>Figma</li>
+      <li>Photoshop</li>
+      <li>UI/UX</li>
+      <li>PHP</li>
+      <li>Laravel</li>
+      <li>Codeigniter 4</li>
+      <li>MySQL</li>
+      <li>SQL Server</li>
+      <li>BPMN</li>
+      <li>BPMS</li>
+      <li>Modelagem de Processos</li>
+      <li>Game Maker</li>
+      <li>Pixel Art</li>
+      <li>Git/Github</li>
+      <li>Microsoft Office</li>
+    </ul>
+  </section>
+  <section class="curriculo">
+    <h3>Currículo</h3>
+    <div class="curriculo-content">
+      <div>
+        <h4>🎓 Formação</h4>
+        <ul>
+          <li>Análise e Desenvolvimento de Sistemas - Estácio (2019 - 2021)</li>
+        </ul>
       </div>
-      <div class="content-area-img">
-        <img class="img-principal" src="https://uploaddeimagens.com.br/images/004/093/918/full/EVANDRO.png?1667822408" alt="Evandro" />
+      <div>
+        <h4>💼 Experiência</h4>
+        <ul>
+          <li><strong>Analista de Sistemas - Sudoeste Informática </strong>(11/2024 - 02/2025)</li>
+          <p>Maker no-code, Javascript, SQL Server, Levantamento de requisitos, Modelagem de processos, Suporte ao usuário.</p>
+          <li><strong>Analista de Sistemas II - SESI</strong> (03/2023 - 09/2024)</li>
+          <p>BPMN, BPMS, Javascript, SQL Server, Levantamento de requisitos, Modelagem de processos.</p>
+          <li><strong>Desenvolvedor PHP - Ótica da Gente</strong> (09/2022 - 03/2023)</li>
+          <p>Codeigniter 3, Javascript, SQL Server, Levantamento de requisitos, Suporte ao usuário.</p>
+          <li><strong>Auxiliar Administrativo de TI - Secretaria de Saúde de Iraquara</strong> (05/2019 - 09/2022)</li>
+          <p>PHP, Postgresql, Levantamento de requisitos, Modelagem de processos, Suporte ao usuário</p>
+        </ul>
+      </div>
+  
+      <div>
+        <h4>📚 Cursos</h4>
+        <ul>
+          <li>PowerBI + SQL Server</li>
+          <li>NodeJS do Zero a Maestria</li>
+          <li>JavaScript do Básico ao Avançado</li>
+          <li>SQL do Básico ao Avançado com MySQL</li>
+          <li>UI & UX Design de aplicativos e sites - Adobe XD e PSD 2024</li>
+          <li>Montagem e Manutenção de Computadores</li>
+        </ul>
+      </div>
+  
+      <div class="curriculo-download">
+        <a href="/portfolio/curriculo.pdf" download target="_blank">📄 Baixar Currículo em PDF</a>
       </div>
     </div>
-    <div class="content-area2" id="projetos">
-      <div class="content-area-cards" name="content-area-cards" id="content-area-cards">
-      </div>
-    </div>
-    <div class="content-area3" id="clientes">
-      <div class="content-area-cards">
-        <div class="card-cliente">
-          <img src="https://uploaddeimagens.com.br/images/004/093/933/full/AnjosAdvocacia.jpg?1667823804" alt="Anjos Advocacia">
-        </div>
-        <div class="card-cliente">
-          <img src="https://uploaddeimagens.com.br/images/004/093/932/full/OticadaGente.jpg?1667823750" alt="Otica da Gente">
-        </div>
-        <div class="card-cliente">
-          <img src="https://uploaddeimagens.com.br/images/004/093/934/full/Iraquara.jpg?1667823838" alt="Prefeitura Municipal de Iraquara">
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <footer class="rodape">
-    <p>Todos os direitos reservados - M17 TECNOLOGIA <i class="fa-regular fa-copyright"></i> 2022</p>
+  </section>
+  
+  <footer>
+    <p>&copy; 2025 - Evandro Mota. Todos os direitos reservados.</p>
   </footer>
 
-  <script type="text/javascript">
-
-    const projetos =
-      [
-        {
-          "id": 1,
-          "nome": "TFD Acess",
-          "descricao": "Sistema de gerenciamento de viagens do Tratamento fora do domicílio, desenvolvido utilizando Microsoft Acces e VBA e utilizado atualmente na rede municipal de saúde de Iraquara/BA.",
-          "image": "https://uploaddeimagens.com.br/images/004/093/906/full/tfdaccess.jpg?1667822218",
-          "stacks": '<i class="fa-brands fa-windows" style="color: #0367d1;"></i><i class="fa-solid fa-database" style="color: #9a1c1c;"></i>',
-          "link": ""
-        },
-        {
-          "id": 2,
-          "nome": "Urano",
-          "descricao": "Sistema de saúde multimodular em desenvolvimento contendo os Módulos: TFD, VISAM, AGENDAMENTO, LABORATÓRIO, URGÊNCIA E EMERGÊNCIA, B.I E FARMÁCIA.",
-          "image": "https://uploaddeimagens.com.br/images/004/093/904/full/urano.jpg?1667822187",
-          "stacks": '<i class="fa-brands fa-windows" style="color: #0367d1;"></i><i class="fa-brands fa-node-js" style="color: #0b965c;"></i><i class="fa-brands fa-react" style="color: #048fae;"></i><i class="fa-brands fa-html5" style="color: #c14c04;"></i><i class="fa-brands fa-css3-alt" style="color: #0e1097;"></i>',
-          "link": ""
-        },
-        {
-          "id": 3,
-          "nome": "Card-Generator 1.0",
-          "descricao": "Um sistema básico desenvolvido sem fins lucrativos para emitir carteirinhas de prioridade para portadores de Fibromialgia",
-          "image": "https://uploaddeimagens.com.br/images/004/093/908/full/cardgenerator.jpg?1667822245",
-          "stacks": '<i class="fa-brands fa-js" style="color: #bf9600;"></i><i class="fa-brands fa-html5" style="color: #c14c04;"></i><i class="fa-brands fa-css3-alt" style="color: #0e1097;"></i>',
-          "link": "https://evandrodsm17.github.io/CardGenerator_1.0/"
-        }
-      ]
-
-
-    function create() {
-
-      const contentcards = document.querySelector('.content-area-cards');
-
-      for (i = 0; i < projetos.length; i++) {
-        let nome = projetos[i].nome;
-        let descricao = projetos[i].descricao;
-        let image = projetos[i].image;
-        let stacks = projetos[i].stacks;
-        let link = projetos[i].link;
-
-        let card = document.createElement('div');
-        let card_description = document.createElement('div');
-
-        card_description.style.cssText =
-          'width: 200px; height: 80px; width: auto; font-size:0.7em; font-weight: 500; color:#3a3a3b; text - align: left; padding: 20px; word - wrap: break-word;'
-
-        card.style.cssText =
-          'cursor: pointer; height: 350px; width: 250px; background-color: #ffffff; box-shadow: 1px 1px 1px 1px rgba(25, 25, 26, 0.185); text-align: center; border-radius: 8px; margin:20px; transition: 900ms; text-align: center;'
-
-        card_description.innerHTML =  '<p>' + descricao + '</p>';
-        
-        card.innerHTML = 
-        '<p class="card-title">' + nome + '</p>' + '<a href="'+ link +'" target="_blank"><img class="card-img" src="' + image + '" alt="image"/></a>';  
-        contentcards.appendChild(card);
-        card.appendChild(card_description);
-
-        card.innerHTML += '<span class="card-stacks">' + stacks + '</span>'; 
-        
-
-      };
-
-    }
-
-
-
-  </script>
+  <script src="/portfolio/script.js"></script>  
 </body>
-
 </html>
