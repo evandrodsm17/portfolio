@@ -1,98 +1,346 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Frontend Developer - Portfólio</title>
-  <link rel="stylesheet" href="estilos.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <img src="foto.jpg" alt="Foto de perfil" class="profile-img" />
-      <h1>Evandro dos Santos Mota</h1>
-      <h2 id="typed-text"></h2>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evandro Mota - Frontend Developer</title>
 
-      <div class="social-links">
-        <a href="https://github.com/evandrodsm17" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/evandrodsm17/" target="_blank">LinkedIn</a>
-        <a href="https://wa.me/5571997428722" target="_blank">Whatsapp</a>
+  <style>
+    :root {
+      --bg: #f3f6fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --blue-500: #2563eb;
+      --blue-700: #1e40af;
+      --navy: #0b1220;
+      --glass: rgba(255, 255, 255, 0.6);
+      --shadow: 0 6px 18px rgba(11, 18, 32, 0.06);
+      --radius: 12px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--bg), #f7f9fc 60%);
+      color: var(--navy);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header.hero {
+      background: linear-gradient(135deg, rgba(14, 42, 78, 0.95) 0%, rgba(30, 48, 112, 0.95) 100%);
+      color: #fff;
+      padding: 56px 0;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      box-shadow: 0 8px 30px rgba(16, 24, 40, 0.15);
+    }
+
+    .hero .inner {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.12);
+      object-fit: cover;
+      box-shadow: 0 8px 20px rgba(11, 18, 32, 0.25);
+      background: linear-gradient(135deg, var(--blue-500), var(--blue-700));
+    }
+
+    .hero h1 {
+      font-size: 1.9rem;
+      letter-spacing: 0.2px;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.95;
+      min-height: 28px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: transform .18s ease, background .18s ease, box-shadow .18s ease;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 18px rgba(11, 18, 32, 0.18);
+    }
+
+    main.curriculo {
+      padding: 44px 0;
+      margin-top: -18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(16, 24, 40, 0.04);
+    }
+
+    .intro {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    @media(min-width:800px) {
+      .intro {
+        grid-column: 1 / 5;
+        text-align: left;
+      }
+    }
+
+    .curriculo-content {
+      grid-column: 1 / -1;
+    }
+
+    @media(min-width:800px) {
+      .curriculo-content {
+        grid-column: 5 / -1;
+      }
+    }
+
+    .curriculo-content h2 {
+      color: var(--blue-700);
+      font-size: 1.25rem;
+      margin-bottom: 14px;
+      border-bottom: 3px solid rgba(37, 99, 235, 0.08);
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+
+    article {
+      background: linear-gradient(180deg, #fff, #fbfcfe);
+      padding: 14px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      border-left: 4px solid rgba(37, 99, 235, 0.12);
+    }
+
+    article h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--navy);
+    }
+
+    .date {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: rgba(14, 42, 78, 0.06);
+      color: var(--navy);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid rgba(11, 18, 32, 0.03);
+    }
+
+    .btn-download {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--blue-500), var(--blue-700));
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+      transition: transform .16s ease, box-shadow .16s ease;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 30px rgba(30, 48, 112, 0.14);
+    }
+
+    footer {
+      margin-top: 34px;
+      padding: 22px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Responsive tweaks */
+    @media(max-width:799px) {
+      .hero h1 {
+        font-size: 1.6rem
+      }
+
+      .hero h2 {
+        font-size: 0.95rem
+      }
+
+      .profile-img {
+        width: 112px;
+        height: 112px
+      }
+
+      .grid {
+        padding: 0 6px
+      }
+
+      .card {
+        padding: 16px
+      }
+
+      .btn-download {
+        width: 100%;
+        text-align: center
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        animation: none !important
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="inner">
+        <img src="imagem.png" alt="Foto de perfil" class="profile-img" />
+        <div>
+          <h1>Evandro Mota</h1>
+          <h2 id="typed-text">Frontend • JavaScript • Arquitetura</h2>
+
+          <nav class="social-links" aria-label="Redes sociais">
+            <a href="https://github.com/evandrodsm17" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/evandrodsm17/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://wa.me/5571997428722" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="skills">
-    <h3>Habilidades</h3>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>Bootstrap</li>
-      <li>JavaScript</li>
-      <li>NodeJS</li>
-      <li>React</li>
-      <li>Git & GitHub</li>
-      <li>Figma</li>
-      <li>Photoshop</li>
-      <li>UI/UX</li>
-      <li>PHP</li>
-      <li>Laravel</li>
-      <li>Codeigniter 4</li>
-      <li>MySQL</li>
-      <li>SQL Server</li>
-      <li>BPMN</li>
-      <li>BPMS</li>
-      <li>Modelagem de Processos</li>
-      <li>Game Maker</li>
-      <li>Pixel Art</li>
-      <li>Git/Github</li>
-      <li>Microsoft Office</li>
-    </ul>
-  </section>
-  <section class="curriculo">
-    <h3>Currículo</h3>
-    <div class="curriculo-content">
-      <div>
-        <h4>🎓 Formação</h4>
-        <ul>
-          <li>Análise e Desenvolvimento de Sistemas - Estácio (2019 - 2021)</li>
-        </ul>
+  <main class="curriculo">
+    <div class="container grid">
+      <div class="card intro">
+        <p style="color:var(--muted);font-weight:600;margin-bottom:6px">Desenvolvedor Full Stack com foco em Frontend
+        </p>
+        <p style="color:var(--muted)">Especializado em JavaScript, Node.js e arquitetura de sistemas. Crio interfaces
+          limpas, responsivas e performáticas.</p>
       </div>
-      <div>
-        <h4>💼 Experiência</h4>
-        <ul>
-          <li><strong>Analista de Sistemas - Sudoeste Informática </strong>(11/2024 - 02/2025)</li>
-          <p>Maker no-code, Javascript, SQL Server, Levantamento de requisitos, Modelagem de processos, Suporte ao usuário.</p>
-          <li><strong>Analista de Sistemas II - SESI</strong> (03/2023 - 09/2024)</li>
-          <p>BPMN, BPMS, Javascript, SQL Server, Levantamento de requisitos, Modelagem de processos.</p>
-          <li><strong>Desenvolvedor PHP - Ótica da Gente</strong> (09/2022 - 03/2023)</li>
-          <p>Codeigniter 3, Javascript, SQL Server, Levantamento de requisitos, Suporte ao usuário.</p>
-          <li><strong>Auxiliar Administrativo de TI - Secretaria de Saúde de Iraquara</strong> (05/2019 - 09/2022)</li>
-          <p>PHP, Postgresql, Levantamento de requisitos, Modelagem de processos, Suporte ao usuário</p>
-        </ul>
-      </div>
-  
-      <div>
-        <h4>📚 Cursos</h4>
-        <ul>
-          <li>PowerBI + SQL Server</li>
-          <li>NodeJS do Zero a Maestria</li>
-          <li>JavaScript do Básico ao Avançado</li>
-          <li>SQL do Básico ao Avançado com MySQL</li>
-          <li>UI & UX Design de aplicativos e sites - Adobe XD e PSD 2024</li>
-          <li>Montagem e Manutenção de Computadores</li>
-        </ul>
-      </div>
-  
-      <div class="curriculo-download">
-        <a href="curriculo.pdf" download target="_blank">📄 Baixar Currículo em PDF</a>
+
+      <div class="card curriculo-content">
+        <h2>Experiência</h2>
+        <article>
+          <h3>Analista de Sistemas - Liga Álvaro Contra a Mortalidade Infantil</h3>
+          <span class="date">05/2025 - Atualmente</span>
+          <p style="color:var(--muted)">Sydle-one, Javascript, Node.js, Integração com Tasy e RM, desenvolvimento de
+            APIs.</p>
+        </article>
+
+        <article>
+          <h3>Analista de Sistemas - Sudoeste Informática</h3>
+          <span class="date">11/2024 - 02/2025</span>
+          <p style="color:var(--muted)">Maker no-code, Javascript, SQL Server, levantamento de requisitos.</p>
+        </article>
+
+        <article>
+          <h3>Analista de Sistemas - SESI</h3>
+          <span class="date">03/2023 - 09/2024</span>
+          <p style="color:var(--muted)">Zeev, Javascript, SQL Server, levantamento de requisitos, BPMN</p>
+        </article>
+
+        <h2 style="margin-top:6px">Habilidades</h2>
+        <div class="skills" style="margin-bottom:14px">
+          <span>JavaScript</span>
+          <span>Node.js</span>
+          <span>SQL Server</span>
+          <span>PHP</span>
+          <span>BPMN</span>
+          <span>API REST</span>
+          <span>Low Code</span>
+
+        </div>
+
+        <a href="curriculo.pdf" download class="btn-download">📄 Currículo em PDF</a>
       </div>
     </div>
-  </section>
-  
+  </main>
+
   <footer>
-    <p>&copy; 2025 - Evandro Mota. Todos os direitos reservados.</p>
+    <p>&copy; 2025 - Evandro Mota</p>
   </footer>
 
-  <script src="/portfolio/script.js"></script>  
+  <script src="script.js"></script>
 </body>
+
 </html>
+</div>
+</header>

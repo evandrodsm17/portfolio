@@ -1,163 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #1f2021;
-    color: #e2e8f0;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-  
-  header {
-    background: #1a1b1c;
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: auto;
-  }
-  
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 4px solid #8110f1;
-  }
-  
-  h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-    color: #8110f1;
-    min-height: 24px;
-  }
-  
-  .social-links {
-    margin-top: 1rem;
-  }
-  
-  .social-links a {
-    margin: 0 0.5rem;
-    color: #8110f1;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    color: #0ea5e9;
-  }
-  
-  .skills {
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  
-  .skills h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .skills ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .skills li {
-    background-color: #4c1781;
-    padding: 0.7rem 1.2rem;
-    border-radius: 8px;
-    font-weight: bold;
-    color: #f8fafc;
-    transition: background-color 0.3s ease;
-  }
-  
-  .skills li:hover {
-    background-color: #8110f1;
-  }
-  
-  footer {
-    margin-top: auto;
-    padding: 1rem;
-    background: #0a0a0a;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #94a3b8;
-  }
-  
-  .curriculo {
-    padding: 2rem 1rem;
-    background-color: #272628;
-    text-align: center;
-  }
-  
-  .curriculo h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-    color: #d4cfda;
-  }
-  
-  .curriculo-content {
-    max-width: 700px;
-    margin: auto;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    color: #cec9c9;
-  }
-  
-  .curriculo-content h4 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #d4cfda;
-  }
-  
-  .curriculo-content p,
-  .curriculo-content ul {
-    margin-left: 1rem;
-  }
-  
-  .curriculo-content ul {
-    list-style: disc;
-  }
-  
-  .curriculo-download {
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .curriculo-download a {
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #4c1781;
-    color: #e6e9f1;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .curriculo-download a:hover {
-    background-color: #5d16a4;
-  }
-  
-  #typed-text{
-    height: 10px;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #d8dbde;
+  color: #094087;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #094087, #023ae3);
+  padding: 3rem 1rem;
+  text-align: center;
+  color: #f8fafc;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+  border: 3px solid #ffffff;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #edeaf0;
+  min-height: 24px;
+}
+
+.social-links {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;  
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: #023ae3;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f1f2f6, #f2f2f3);
+}
+
+.skills {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.skills h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skills li {
+  background: linear-gradient(135deg, #101010, #29292a);
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #f8fafc;
+  cursor: pointer;
+}
+
+.skills li:hover {
+  background: linear-gradient(135deg, #0225b0, #2105ab);
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  background: #0a0a0a;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.curriculo {
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #eaebeb, #f5f7fa);
+  text-align: center;
+}
+
+.curriculo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #000000;
+}
+
+.curriculo-content {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #282626;
+}
+
+.curriculo-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #000000;
+}
+
+.curriculo-content p,
+.curriculo-content ul {
+  margin-left: 1rem;
+}
+
+.curriculo-content ul {
+  list-style: disc;
+}
+
+.curriculo-download {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.curriculo-download a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #0b0b0b, #1b1b1c);
+  color: #e6e9f1;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.curriculo-download a:hover {
+  background: linear-gradient(135deg, #0225b0, #2105ab);
+}
+
+#typed-text {
+  height: 10px;
+}

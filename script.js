@@ -1,5 +1,5 @@
 const textElement = document.getElementById("typed-text");
-const phrases = ["Analista de Sistemas", "Programador Web", "Apaixonado por Código 💙"];
+const phrases = ["Analista de Sistemas", "Desenvolvedor Web", "Ser simples é ser excepcional"];
 let index = 0;
 let charIndex = 0;
 let isDeleting = false;
